@@ -46,6 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    var arrNames = ['Pakistan', 'India', 'Iran', 'Usa', 'Uk'];
     
     return Scaffold(
       appBar: AppBar(
@@ -55,49 +57,49 @@ class _MyHomePageState extends State<MyHomePage> {
         
         title: Text('Hello Syed'),
       ),
-    //   body:Center(
-    //     child: Container(
-    //     width: 100,
-    //     height: 100,
-    //     color: const Color.fromARGB(255, 8, 129, 157),
+//       body:Center(
+//         child: Container(
+//         width: 100,
+//         height: 100,
+//         color: const Color.fromARGB(255, 8, 129, 157),
         
-    //     child: Align(
-    //       alignment: Alignment.center,
-    //       child: Text('Hello Syed',
-    //        style: TextStyle
-    //        (color: Color.fromRGBO(219, 9, 9, 0.882), 
-    //        fontSize: 15, 
-    //        fontWeight: FontWeight.bold,
-    //       //  backgroundColor: Color.fromARGB(a, r, g, b),       
-    //         ),
-    // ),
-    // )
+//         child: Align(
+//           alignment: Alignment.center,
+//           child: Text('Hello Syed',
+//            style: TextStyle
+//            (color: Color.fromRGBO(219, 9, 9, 0.882), 
+//            fontSize: 15, 
+//            fontWeight: FontWeight.bold,
+//           //  backgroundColor: Color.fromARGB(a, r, g, b),       
+//             ),
+//     ),
+//     )
            
-    //   )
+//       )
           
-    //   ),
+//       ),
 
 
-    // body: TextButton(
-    // onPressed: (){
-    //   print('Text Button Tapped! ');
+//     body: TextButton(
+//     onPressed: (){
+//       print('Text Button Tapped! ');
       
-    // }, 
-    // child: Text('Click Me'),
-    // onLongPress: (){
+//     }, 
+//     child: Text('Click Me'),
+//     onLongPress: (){
       
-    //   print('Text long Press');
-    // },
-    // ),
+//       print('Text long Press');
+//     },
+//     ),
 
-  // body: ElevatedButton(
-  //   onPressed: (){
-  //     print('Elevated Button Press');
-  // }, 
-  // onLongPress: (){
-  //   print('Elevator Long Press Button');
-  // },
-  // child: Text('Click Me')),
+//   body: ElevatedButton(
+//     onPressed: (){
+//       print('Elevated Button Press');
+//   }, 
+//   onLongPress: (){
+//     print('Elevator Long Press Button');
+//   },
+//   child: Text('Click Me')),
 // body: Stack(
 //   children: [
 //     Align(
@@ -304,10 +306,29 @@ class _MyHomePageState extends State<MyHomePage> {
 //     ),
 //   ),
 // ),
-// 
 
 
+// body: ListView.builder(itemBuilder: (context, index){
+//   return Text(arrNames[index], style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),);
 
+// },
+// itemCount: arrNames.length,
+// itemExtent: 100,
+// scrollDirection: Axis.horizontal,
+// )
+
+// body: ListView.separated(itemBuilder: (context, index){
+//   return Text(arrNames[index], style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),);
+
+// }, separatorBuilder: (context, index){
+//   return Divider(height: 30, thickness: 3);
+// }, itemCount: arrNames.length),
+
+body: Container(
+  color: Color.fromRGBO(100, 230, 180, 120 ),
+  width: double.infinity,
+  height: double.infinity,
+),
 
     );
   }
